@@ -9,7 +9,7 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             require: 'Please include a body of text for your reaction',
-            //Add max 280 characters
+            max: 280
         },
         username: {
             type: String,
@@ -19,6 +19,11 @@ const ReactionSchema = new Schema(
             type: Date,
             default: Date.now,
             //add getter to format date
+        }
+    },
+    {
+        toJSON: {
+            getters: true
         }
     }
 )

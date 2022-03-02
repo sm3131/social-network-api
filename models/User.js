@@ -12,7 +12,10 @@ const UserSchema = new Schema(
             type: String,
             required: 'Please provide a valid email',
             unique: true,
-            //Add validation
+            validate: {
+                validator: () => Promise.resolve(false),
+                message: 'Please enter a valid email'
+            }
         },
         thoughts: [
             {
@@ -30,7 +33,8 @@ const UserSchema = new Schema(
     {
         toJSON: {
             virtuals: true
-        }
+        },
+        id: false
     }
 );
 

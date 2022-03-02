@@ -7,7 +7,8 @@ const ThoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: 'You need to provide a body of text for your thought',
-            //add length 1-280
+            min: 1,
+            max: 280
         },
         createdAt: {
             type: Date,
@@ -19,6 +20,13 @@ const ThoughtSchema = new Schema(
             required: 'Please enter a username for this thought'
         },
         reactions: [reactionSchema]
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
     }
 )
 
