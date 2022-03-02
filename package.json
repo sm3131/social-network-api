@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "Social network API with NoSQL database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sm3131/social-network-api.git"
+  },
+  "author": "Sammi Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sm3131/social-network-api/issues"
+  },
+  "homepage": "https://github.com/sm3131/social-network-api#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4"
+  }
+}
