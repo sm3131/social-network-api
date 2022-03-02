@@ -12,10 +12,7 @@ const UserSchema = new Schema(
             type: String,
             required: 'Please provide a valid email',
             unique: true,
-            validate: {
-                validator: () => Promise.resolve(false),
-                message: 'Please enter a valid email'
-            }
+            match: [ /.+\@.+\..+/, 'Please enter a valid email address']
         },
         thoughts: [
             {
