@@ -31,6 +31,9 @@ const ThoughtSchema = new Schema(
 )
 
 //Create a virtual for reaction count
+ThoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+})
 
 const Thought = model('Thought', ThoughtSchema);
 
