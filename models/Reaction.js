@@ -8,12 +8,12 @@ const ReactionSchema = new Schema(
         },
         reactionBody: {
             type: String,
-            require: 'Please include a body of text for your reaction',
-            max: 280
+            required: 'Please include a body of text for your reaction',
+            maxlength: 280
         },
         username: {
             type: String,
-            require: 'Please provide a username for this reaction'
+            required: 'Please provide a username for this reaction'
         },
         createdAt: {
             type: Date,
