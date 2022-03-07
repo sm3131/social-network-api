@@ -1,9 +1,8 @@
 const { Schema, model, Types } = require('mongoose');
 const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
+const date = require('date-and-time')
 
-//Add date formatter utils file function
-
+//Model for thoughts
 const ThoughtSchema = new Schema(
     {
         thoughtText: {
@@ -15,8 +14,7 @@ const ThoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (createdAtVal) => dateFormat(createdAtVal)
-            //add getter for formatted date
+            get: (createdAtVal) => date.format(createdAtVal, 'MM/DD/YYYY HH:mm')
         },
         username: {
             type: String,
@@ -33,7 +31,7 @@ const ThoughtSchema = new Schema(
     }
 )
 
-//Create a virtual for reaction count
+//Virtual for reaction count
 ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 })
@@ -41,3 +39,7 @@ ThoughtSchema.virtual('reactionCount').get(function () {
 const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought;
+
+
+
+
