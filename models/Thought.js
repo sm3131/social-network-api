@@ -2,7 +2,7 @@ const { Schema, model, Types } = require('mongoose');
 const reactionSchema = require('./Reaction');
 const date = require('date-and-time')
 
-//Model for thoughts
+//Create Thought document to store in mongoDB
 const ThoughtSchema = new Schema(
     {
         thoughtText: {

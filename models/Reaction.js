@@ -1,6 +1,7 @@
 const { Schema, Types } = require('mongoose');
 const date = require('date-and-time');
 
+//Reaction sub-document for Thought document
 const ReactionSchema = new Schema(
     {
         reactionId: {

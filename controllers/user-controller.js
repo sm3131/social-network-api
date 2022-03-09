@@ -39,12 +39,14 @@ const userController = {
             });
     },
 
+    //create a user
     createUser({ body }, res) {
         User.create(body)
             .then(dbUserData => res.json(dbUserData))
             .catch(err => res.status(400).json(err));
     },
 
+    //update a user
     updateUser({ params, body }, res) {
         User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
             .then(dbUserData => {
@@ -57,6 +59,7 @@ const userController = {
             .catch(err => res.status(400).json(err));
     },
 
+    //delete a user
     deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
             .then(dbUserData => {
@@ -79,6 +82,7 @@ const userController = {
             .catch(err => res.status(400).json(err));
     },
 
+    //add a friend to a user
     addFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.userId },
@@ -95,6 +99,7 @@ const userController = {
             .catch(err => res.json(err));
     },
 
+    //remove a friend from a user
     removeFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.userId},

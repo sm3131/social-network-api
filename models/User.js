@@ -1,5 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 
+//Create User document to store in mongoDB
 const UserSchema = new Schema(
     {
         username: {
@@ -35,7 +36,7 @@ const UserSchema = new Schema(
     }
 );
 
-//Add virtual for friend count 
+//Virtual for friend count 
 UserSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
