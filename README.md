@@ -24,6 +24,7 @@ The Social Network API was built with:
 - Mongoose
 - MongoDB
 - Express.js
+- Date-and-time
 
 ## Code Access
 
@@ -31,8 +32,19 @@ If you would like to access the code for the social network API, please visit [G
 
 ## Preview
 
-Click on the links below to watch the Screencastify videos that demonstrate the social network API being used in Insomnia:
+Below are the Screencastify videos for the social network API being described in Insomnia, but they are audio only, because Screencastify video wasn't working properly. You can use the audio to get some understanding of how the API works:
 
+Part 1:
+
+https://drive.google.com/file/d/1TRN7mcG2MwxAPy7wqdigb_eqnOTL_-l0/view
+
+Part 2:
+
+https://drive.google.com/file/d/1FFoCzzDY7hT1VWH73eHReduNYn1EaaG4/view
+
+Part 3:
+
+https://drive.google.com/file/d/1TScpsDOo4p-MNGdXkI0BiMv8cZPGP8at/view
 
 ## Installation
 To install the social network API complete the following steps:

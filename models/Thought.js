@@ -1,6 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
 const reactionSchema = require('./Reaction');
-const date = require('date-and-time')
+const date = require('date-and-time');
 
 //Create Thought document to store in mongoDB
 const ThoughtSchema = new Schema(
